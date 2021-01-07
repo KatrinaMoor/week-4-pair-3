@@ -17,7 +17,7 @@ public class Items
     
    
 
-	public void Items(String slot, String name, BigDecimal price, String type, int quantity)
+	public Items(String slot, String name, BigDecimal price, String type, int quantity)
 	{
 		this.slot = slot;
 		this.name = name;

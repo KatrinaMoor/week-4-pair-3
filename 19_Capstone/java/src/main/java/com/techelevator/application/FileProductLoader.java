@@ -25,8 +25,8 @@ public class FileProductLoader
 		{
 			List<Items> items = new ArrayList<Items>();
 			
-			File productsPath = new File("vendingmachine.csv");		
-			try(Scanner fileScanner = new Scanner(productsPath))
+			File itemsPath = new File("vendingmachine.csv");		
+			try(Scanner fileScanner = new Scanner(itemsPath))
 			{
 				// read one line to skip the header
 				fileScanner.nextLine();
@@ -45,10 +45,11 @@ public class FileProductLoader
 					Integer quantity = parts[4];
 					
 					
-					Items items = new Items(slot, name, price, type, quantity);
-									
+					Items item = new Items(slot, name, price, type, quantity);
+		
 					// add it to the list
-					items.add(items);
+					//item.add(item);
+					items.add(item);
 				}
 			}
 			catch(Exception ex)

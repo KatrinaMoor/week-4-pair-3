@@ -15,8 +15,9 @@ public class Items
     private String type;
     private int quantity;
     
-    
-	public void Product(String slot, String name, BigDecimal price, String type, int quantity)
+   
+
+	public void Items(String slot, String name, BigDecimal price, String type, int quantity)
 	{
 		this.slot = slot;
 		this.name = name;
@@ -25,7 +26,7 @@ public class Items
 		this.quantity = quantity;
 	}
 
-	public String getId()
+	public String getSlot()
 	{
 		return slot;
 	}

@@ -61,20 +61,13 @@ public class UserOutput
 		System.out.println();
 		
 	}
-		List<Items> items = Items.getItems()
+		//List<Items> items = Items.getItems()
 	
-		for(Items : 
-		{
-			
+	
 
-			System.out.println(line);
-		}
 
-		System.out.println("--------------------------------------------------------------------------");
-		System.out.println(String.format("%-61s $ %10.2f", "Cart Total", shoppingCart.getCartTotal()));
-
-		System.out.println();
-	}
+		
+	
     
 	
 	

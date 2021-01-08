@@ -2,17 +2,18 @@ package com.techelevator.models;
 
 import java.math.BigDecimal;
 
-public class Gum
+public class Gum extends Items
+
 {
-	public Gum(String name, BigDecimal price)
+	public Gum(String slot, String name, BigDecimal price, String type, int quantity)
 	{
-		super(name, price);
+		super(slot, name, price, type, quantity);
 	}
 	
 	String display = "Chew Chew, Yum!";
 	
 	@Override
-	public String getDisplay()
+	public String toString()
 	{
 		return display;
 	}

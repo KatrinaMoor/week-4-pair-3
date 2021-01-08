@@ -2,17 +2,17 @@ package com.techelevator.models;
 
 import java.math.BigDecimal;
 
-public class Chips
+public class Chips extends Items
 {
-	public Chips(String name, BigDecimal price)
+	public Chips(String slot, String name, BigDecimal price, String type, int quantity)
 	{
-		super(name, price);
+		super(slot, name, price, type, quantity);
 	}
 	
 	String display = "Crunch Crunch, Yum!";
 	
 	@Override
-	public String getDisplay()
+	public String toString()
 	{
 		return display;
 	}

@@ -42,7 +42,7 @@ public class FileProductLoader
 					String name = parts[1];
 					BigDecimal price = new BigDecimal(parts[2]);
 					String type = parts[3];
-					Integer quantity = parts[4];
+					Integer quantity = 5;
 					
 					
 					Items item = new Items(slot, name, price, type, quantity);

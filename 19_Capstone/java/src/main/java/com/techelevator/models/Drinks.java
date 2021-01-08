@@ -4,15 +4,15 @@ import java.math.BigDecimal;
 
 public class Drinks extends Items
 {
-	public Drinks(String name, BigDecimal price)
+	public Drinks(String slot, String name, BigDecimal price, String type, int quantity)
 	{
-		super(name, price);
+		super(slot, name, price, type, quantity);
 	}
 	
 	String display = "Glug Glug, Yum!";
 	
 	@Override
-	public String getDisplay()
+	public String toString()
 	{
 		return display;
 	}

@@ -2,17 +2,18 @@ package com.techelevator.models;
 
 import java.math.BigDecimal;
 
-public class Candy
+public class Candy extends Items
 {
-	public Candy(String name, BigDecimal price)
+
+	public Candy(String slot, String name, BigDecimal price, String type, int quantity)
 	{
-		super(name, price);
+		super(slot, name, price, type, quantity);
 	}
 	
 	String display = "Munch Munch, Yum!";
 	
 	@Override
-	public String getDisplay()
+	public String toString()
 	{
 		return display;
 	}

@@ -33,18 +33,14 @@ public class Purchase
         {
         	// display main menu - get their selection
       
-			String option = UserInput.getPurchaseScreenOption();
+			String choice = UserInput.getPurchaseScreenOption();
             
-            String choice = "Feed Money";//temporary hard code
+ //           String choice = "Feed Money";//temporary hard code
 
             if(choice.equals("Feed Money"))
             {
-                //get money from user
-            	//add money to credit
             	UserInput.getMoney();
             	credit.add(UserInput.getMoney());
-            			
-
             }
             else if(choice.equals("Select Product"))
             {
@@ -53,7 +49,7 @@ public class Purchase
             	// get product id
             	String slot = "A1";
             	Items item = inventory.getItemBySlot(slot);
-            			//check if enough money to buy product
+            	//check if enough money to buy product
             	//if yes then subtract the price of product from credit 
             	//update quantity of product
             	//include sound

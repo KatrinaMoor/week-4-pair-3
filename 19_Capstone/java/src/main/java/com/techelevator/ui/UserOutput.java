@@ -35,7 +35,7 @@ public class UserOutput
 
 	public static void displayHomeScreen()
 	{
-		clearScreen();
+//		clearScreen();
 		
 		System.out.println();
 		System.out.println("***************************************************");
@@ -46,7 +46,7 @@ public class UserOutput
 	
 	public static void displayInventory(ItemInventory inventory)
 	{
-		clearScreen();
+//		clearScreen();
 
 		System.out.println();
 		System.out.println("***************************************************");

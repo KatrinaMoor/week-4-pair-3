@@ -22,7 +22,7 @@ import com.techelevator.ui.UserOutput;
 public class VendingMachine 
 {
 	private ItemInventory inventory = new ItemInventory();
-    private Purchase purchase = new Purchase();
+    private Purchase purchase = new Purchase(inventory);
 
  //   private Logger errorLogger = new Logger("errors");
 //    private Logger activityLogger = new Logger("logs");
@@ -40,11 +40,12 @@ public class VendingMachine
             if(choice.equals("display"))
             {
                 // display the vending machine slots
-            	
+            	UserOutput.displayInventory(inventory);
             }
             else if(choice.equals("purchase"))
             {
                 // make a purchase
+            	purchase.run();
             }
             else if(choice.equals("exit"))
             {

@@ -28,15 +28,14 @@ public class FileProductLoader
 			File itemsPath = new File("vendingmachine.csv");		
 			try(Scanner fileScanner = new Scanner(itemsPath))
 			{
-				// read one line to skip the header
-				fileScanner.nextLine();
+				
 				
 				//loop and add each product to the list
 				while(fileScanner.hasNextLine())
 				{
 					String line = fileScanner.nextLine();
 					// create the product
-					String[] parts = line.split("|");
+					String[] parts = line.split("\\|");
 					
 					String slot = parts[0];
 					String name = parts[1];

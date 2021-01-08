@@ -33,15 +33,18 @@ public class Purchase
         {
         	// display main menu - get their selection
       
-  //          String option = UserInput.getPurchaseOptions()
+			String option = UserInput.getPurchaseScreenOption();
             
-            String choice = "Feed Money";
+            String choice = "Feed Money";//temporary hard code
 
             if(choice.equals("Feed Money"))
             {
                 //get money from user
             	//add money to credit
-            	
+            	UserInput.getMoney();
+            	credit.add(UserInput.getMoney());
+            			
+
             }
             else if(choice.equals("Select Product"))
             {

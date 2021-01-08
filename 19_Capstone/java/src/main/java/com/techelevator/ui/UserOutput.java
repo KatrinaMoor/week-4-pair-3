@@ -64,11 +64,17 @@ public class UserOutput
 		//List<Items> items = Items.getItems()
 	
 	
+	public static void displayPurchase()
+	{
 
+		System.out.println();
+		System.out.println("***************************************************");
+		System.out.println("                    Purchase");
+		System.out.println("***************************************************");
 
 		
 	
     
 	
-	
+	}
 }

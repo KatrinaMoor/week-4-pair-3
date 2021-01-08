@@ -1,5 +1,7 @@
 package com.techelevator.application;
 
+import com.techelevator.ui.UserInput;
+import com.techelevator.ui.UserOutput;
 
 /*
  * Vending Machine is the main application and manages the flow
@@ -29,12 +31,16 @@ public class VendingMachine
     {
         while(true)
         {
+        	// display main menu - get their selection
+            UserOutput.displayHomeScreen();
+            String option = UserInput.getHomeScreenOption();
+            
             String choice = "display";
 
             if(choice.equals("display"))
             {
                 // display the vending machine slots
-            	displayInventory;
+            	
             }
             else if(choice.equals("purchase"))
             {
@@ -45,23 +51,19 @@ public class VendingMachine
                 // good bye
                 break;
             }
-//            else
-//            {
-//                // invalid option try again
-//              UserOutput.displayMessage("You selected an invalid option:");
-//            }
-//
-//          UserInput.waitForEnter();
+            else
+            {
+                // invalid option try again
+              UserOutput.displayMessage("You selected an invalid option:");
+            }
+
+          UserInput.waitForEnter();
 
         }
 
-//      UserOutput.clearScreen();
-//     UserOutput.displayMessage("Thank you!");
+      UserOutput.clearScreen();
+     UserOutput.displayMessage("Thank you!");
         
     }
     
-    public void displayInventory
-    {
-    	userOutput.displayInventory(inventory);
-    }
 }

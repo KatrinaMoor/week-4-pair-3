@@ -47,12 +47,12 @@ public class ItemInventory
 			{
 				if(i.getSlot().equals(slot))
 				{
-					items = i;
+					item = i;
 					break;
 				}
 	        }
 	        
-	        return items;
+	        return item;
 	    }
 	    
 

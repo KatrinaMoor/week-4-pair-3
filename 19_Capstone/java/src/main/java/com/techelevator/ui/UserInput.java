@@ -58,12 +58,15 @@ private static Scanner scanner = new Scanner(System.in);
 		
 		return productId.toUpperCase().trim();
 	}
+	
 
 	public static void waitForEnter()
 	{
 		System.out.print("Press enter to continue...");
 		scanner.nextLine();
 	}
+	
+	
 
 }
 

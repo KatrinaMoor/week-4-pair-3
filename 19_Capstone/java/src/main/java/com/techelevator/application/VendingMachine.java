@@ -35,19 +35,18 @@ public class VendingMachine
             UserOutput.displayHomeScreen();
             String option = UserInput.getHomeScreenOption();
             
-            String choice = "display";
 
-            if(choice.equals("display"))
+            if(option.equals("display items"))
             {
                 // display the vending machine slots
             	UserOutput.displayInventory(inventory);
             }
-            else if(choice.equals("purchase"))
+            else if(option.equals("purchase"))
             {
                 // make a purchase
             	purchase.run();
             }
-            else if(choice.equals("exit"))
+            else if(option.equals("exit"))
             {
                 // good bye
                 break;
@@ -56,6 +55,7 @@ public class VendingMachine
             {
                 // invalid option try again
               UserOutput.displayMessage("You selected an invalid option:");
+              System.out.println(option);
             }
 
           UserInput.waitForEnter();

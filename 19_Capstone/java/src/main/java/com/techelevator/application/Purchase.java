@@ -21,7 +21,7 @@ import com.techelevator.ui.UserOutput;
 public class Purchase
 {
 	private ItemInventory inventory;
-	private BigDecimal credit = BigDecimal.ZERO;
+	BigDecimal credit = BigDecimal.ZERO;
 	
 	public Purchase(ItemInventory inventory)
 	{
@@ -35,9 +35,7 @@ public class Purchase
       
 			String choice = UserInput.getPurchaseScreenOption();
             
- //           String choice = "Feed Money";//temporary hard code
-
-            if(choice.equals("Feed Money"))
+             if(choice.equals("Feed Money"))
             {
             	UserInput.getMoney();
             	credit.add(UserInput.getMoney());
@@ -51,15 +49,43 @@ public class Purchase
             	
             	String slot = "A1";
             	Items item = inventory.getItemBySlot(slot);
-            	//check if enough money to buy product
-            	//if yes then subtract the price of product from credit 
+            	BigDecimal cost = item.getPrice();
+            	
+            	if(credit.compareTo(cost) < 0)
+            	{
+            		System.out.println("Insufficient Funds. Please add more or exit");
+            	}
+            	else
+            	{
+            		if(item.getQuantity() > 0)
+            		{
+            			
+            			credit = credit.subtract(cost);
+            		}
+            		else
+            		{
+            			System.out.println("SOLD OUT");
+            		}
+            	}
+            	
+
             	//update quantity of product
             	//include sound
-            	//if not enough money - error message "invalid amount"
+            	
             }
             else if(choice.equals("Exit Transaction"))
             {
-                //calculate and return change
+//                do
+//                {
+//                	make change for quarters
+//                }
+//                while you have more than 25 cents change
+//                do
+//                {
+//                	make change for 10 cents change
+//                }
+//                while you have 
+//               nickels = change/5
                 break;
             }
         }

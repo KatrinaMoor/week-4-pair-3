@@ -110,7 +110,7 @@ private static Scanner scanner = new Scanner(System.in);
 		String dollar = scanner.nextLine().trim();
 		BigDecimal dollarAmount;
 		
-		if(dollar.contains("1") || dollar.contains("5") || dollar.contains("10") || dollar.contains("20"))
+		if(dollar.contains("1") || dollar.contains("2") || dollar.contains("5") || dollar.contains("10"))
 		{
 			dollarAmount = new BigDecimal(dollar);
 			return dollarAmount;

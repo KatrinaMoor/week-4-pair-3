@@ -47,6 +47,8 @@ public class Purchase
                 // display products 
             	UserOutput.displayInventory(inventory);
             	// get product id
+            	UserInput.getSelectedProduct();
+            	
             	String slot = "A1";
             	Items item = inventory.getItemBySlot(slot);
             	//check if enough money to buy product

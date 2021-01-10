@@ -21,7 +21,7 @@ import com.techelevator.ui.UserOutput;
 public class Purchase
 {
 	private ItemInventory inventory;
-	BigDecimal credit = BigDecimal.ZERO;
+	BigDecimal dollarAmount = BigDecimal.ZERO;
 	
 	public Purchase(ItemInventory inventory)
 	{
@@ -38,7 +38,11 @@ public class Purchase
              if(choice.equals("Feed Money"))
             {
             	UserInput.getMoney();
-            	credit.add(UserInput.getMoney());
+            	dollarAmount.add(UserInput.getMoney());
+            	/*
+            	 * it's cycling through but not updating the credited amount.
+            	 * Just an infinite loop until "exit"
+            	 */
             }
             else if(choice.equals("Select Product"))
             {
@@ -51,7 +55,7 @@ public class Purchase
             	Items item = inventory.getItemBySlot(slot);
             	BigDecimal cost = item.getPrice();
             	
-            	if(credit.compareTo(cost) < 0)
+            	if(dollarAmount.compareTo(cost) == -1)
             	{
             		System.out.println("Insufficient Funds. Please add more or exit");
             	}
@@ -60,7 +64,7 @@ public class Purchase
             		if(item.getQuantity() > 0)
             		{
             			
-            			credit = credit.subtract(cost);
+            			dollarAmount = dollarAmount.subtract(cost);
             		}
             		else
             		{

@@ -119,6 +119,7 @@ private static Scanner scanner = new Scanner(System.in);
 		{
 			dollarAmount = new BigDecimal(0);
 			return dollarAmount;
+//			UserOutput.displayMessage(dollarAmount);
 		}
 		else
 		{
